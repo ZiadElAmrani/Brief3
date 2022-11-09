@@ -1,0 +1,130 @@
+#search_table{
+    grid-area: overlap;
+    align-self: center;
+    justify-content: center;
+}
+
+#input_card{
+    width: 40rem;
+    height: 15rem;
+    grid-area: overlap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#container2{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "overlap";
+}
+
+
+
+.btn{
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: width .5s,
+    border-radius .5s; 
+}
+
+.button_sbmt{
+    position: relative;
+    width: 70px;
+    height: 30px;
+    font-size: 10px;
+    background-color: #202231;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: width .5s,
+    border-radius .5s; 
+}
+
+.button_sbmt *{
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+    transition: opacity .25s;
+}
+
+.button_sbmt .icon{
+    opacity: 0;
+}
+
+.button_sbmt:focus{
+    width: 30px;
+    background-color: #44c08a;
+    border-radius: 50%;
+}
+
+.button_sbmt:focus .text{
+    opacity: 0;
+}
+
+.button_sbmt:focus .icon{
+    opacity: 1;
+    transition-delay: .5s;
+}    
+
+
+
+
+#btn-delete:focus {
+    outline: none;
+}
+#btn-delete .mdi {
+    margin-right: 8px;
+}
+#btn-delete {
+    background: none;
+    border: 1px solid #bdbdbd;
+    height: 28px;
+    padding: 0 24px 0 16px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    color: red;
+}
+#btn-delete > .mdi-delete-empty {
+    display: none;
+}
+#btn-delete:hover {
+    background-color: #ff9696;
+}
+#btn-delete:hover > .mdi-delete-empty {
+    display: block;
+}
+#btn-delete:hover > .mdi-delete {
+    display: none;
+}
+#btn-delete:focus {
+    box-shadow: 0 0 0 4px #ffcccc;
+}
+
+#btn-edit{
+    background: none;
+    border: 1px solid #bdbdbd;
+    height: 28px;
+    padding: 0 24px 0 16px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    color: blue;
+}
+
+#btn-edit:focus {
+    outline: none;
+}
+
+#btn-delete:focus {
+    box-shadow: 0 0 0 4px #ffcccc;
+}
+
+#btn-edit:hover {
+    background-color: #c8d5ff;
+}

@@ -1,0 +1,68 @@
+.container{
+    margin-top: 50px;
+    width: 400px;
+    height: 400px;
+}
+
+.btn{
+    
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: width .5s,
+    border-radius .5s; 
+}
+
+#btn-delete:focus {
+    outline: none;
+}
+#btn-delete .mdi {
+    margin-right: 8px;
+}
+#btn-delete {
+    border: 1px solid #bdbdbd;
+    height: 28px;
+    padding: 0 24px 0 16px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    color: red;
+}
+#btn-delete > .mdi-delete-empty {
+    display: none;
+}
+#btn-delete:hover {
+    background-color: #ff9696;
+}
+#btn-delete:hover > .mdi-delete-empty {
+    display: block;
+}
+#btn-delete:hover > .mdi-delete {
+    display: none;
+}
+#btn-delete:focus {
+    box-shadow: 0 0 0 4px #ffcccc;
+}
+
+#btn-edit{
+    border: 1px solid #bdbdbd;
+    height: 28px;
+    padding: 0 24px 0 16px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    color: blue;
+}
+
+#btn-edit:focus {
+    outline: none;
+}
+
+#btn-delete:focus {
+    box-shadow: 0 0 0 4px #ffcccc;
+}
+
+#btn-edit:hover {
+    background-color: #c8d5ff;
+}
