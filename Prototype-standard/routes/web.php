@@ -4,6 +4,7 @@ use App\Http\Controllers\Promotion_Controller;
 use App\Http\Controllers\students_Controller;
 use App\Http\Controllers\briefs_Controller;
 use App\Http\Controllers\tasks_Controller;
+use App\Http\Controllers\briefStudent_Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -74,3 +75,13 @@ Route::get('task/{id}/edit', [tasks_Controller::class, 'edit_task']);
 Route::post('task/{id}/update', [tasks_Controller::class, 'update_task']);
 
 Route::get('task/{id}/delete', [tasks_Controller::class, 'delete_task']);
+
+// ASSIGN BRIEFS FOR STUDENTS ROUTES
+
+Route::get('BriefAssign/{id}', [briefStudent_Controller::class, 'displayStudents']);
+
+Route::get('BriefAssign/{brief_id}/Attach/{id}', [briefStudent_Controller::class, 'attachBriefSt']);
+
+Route::get('BriefAssign/{brief_id}/Detach/{id}', [briefStudent_Controller::class, 'detachBriefSt']);
+
+Route::get('BriefAssign/{brief_id}/AttachClass/{id}', [briefStudent_Controller::class, 'attachClass']);

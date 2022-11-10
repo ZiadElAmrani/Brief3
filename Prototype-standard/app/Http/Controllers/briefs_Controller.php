@@ -50,9 +50,8 @@ class briefs_Controller extends Controller
         return redirect('briefs_index');
     }
 
-    public function search_brief(){
+    public function search_brief()
+    {
         echo "connect";
     }
-
-
 }

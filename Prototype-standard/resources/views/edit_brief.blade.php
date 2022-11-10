@@ -12,11 +12,12 @@
 </head>
 <body>
 
-    @foreach ($data as $row)
+    
 
     <div class="container text-center border border-2 rounded">
         <br><h1 >Brief edit </h1><br><br>
         <table class="table">
+            @foreach($data as $row)
             <form action="{{url("Brief")}}/{{$row->id}}/{{("update")}}" method="POST">
             @csrf
             <thead>
@@ -38,12 +39,12 @@
                 </tr>
                 
             </tbody>
-        
+            @endforeach
         </table>
         <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i>Update Brief</button>
             </form>
     </div>
-    @endforeach
+    
     <table class="table table-primary table-striped table-hover">
         <thead>
             <tr>

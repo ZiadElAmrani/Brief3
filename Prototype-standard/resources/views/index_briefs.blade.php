@@ -69,6 +69,10 @@
                                 <button id="btn-delete">
                                     <span><i class="fa-regular fa-trash-can" id="mdi-delete-empty"></i>Delete</span>
                                 </button></a>
+                            <a href="{{url("BriefAssign")}}/{{$row->id}}">
+                                <button id="btn-tasks">
+                                    <span><i class="fa-solid fa-plus"></i>Assign Brief</span>
+                                </button></a>
                         </td>
                         <td>
                             <a href="{{url("Brief")}}/{{$row->id}}/{{"add_task"}}">
