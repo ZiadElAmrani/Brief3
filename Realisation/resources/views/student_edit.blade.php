@@ -11,6 +11,12 @@
     <title>Student Update</title>
 </head>
 <body>
+    <ul class="menu-bar">
+        <li><a href="{{url('/')}}">Promotions</a></li>
+        
+        
+        <li><a href="{{URL('briefs_index')}}    ">Briefs</a></li>
+    </ul>
     @foreach ($data as $row)
 
     <div class="container text-center border border-2 rounded">
@@ -33,6 +39,16 @@
                 <tr>
                     <th scope="row">Email:</th>
                     <td scope="col"><input type="text" value="{{$row->email}}" name="email"></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row">Phone Number:</th>
+                    <td scope="col"><input type="text" value="{{$row->student_phone}}" name="student_phone"></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row">Upload student image:</th>
+                    <td scope="col"><input type="file" value="{{$row->student_image}}" name="student_image"></td>
                     
                 </tr>
                 

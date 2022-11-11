@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Promotion;
+use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -24,7 +25,7 @@ class Promotion_Controller extends Controller
         $obj = new Promotion();
         $obj->name = $req->name;
         $obj->save();
-        return redirect('promotions');
+        return redirect('/');
     }
 
     public function edit_promotion($id)
@@ -37,19 +38,28 @@ class Promotion_Controller extends Controller
 
         $data = Promotion::where('id', $id)->get();
 
-        return view('edit_promotion', compact('data', 'student'));
+        $student = Student::where('promotion_id', $id)->get();
+        $d = [];
+        foreach ($student as $item) {
+
+            $d[] = $item->assignedBrief;
+        }
+
+        $uniqueD = collect($d)->unique('pivot');
+
+        return view("edit_promotion", compact('student', 'data', 'uniqueD'));
     }
 
     public function update_promotion(Request $req, $id)
     {
         $promo = Promotion::where('id', $id)->update(['name' => $req->name]);
-        return redirect('promotions');
+        return redirect('/');
     }
 
     public function delete_promotion(Request $req)
     {
         Promotion::where('id', $req->id)->delete();
-        return redirect('promotions');
+        return redirect('/');
     }
 
     public function search($name = null)

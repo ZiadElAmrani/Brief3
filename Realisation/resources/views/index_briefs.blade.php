@@ -13,19 +13,19 @@
     <title>Briefs</title>
 </head>
 <body>
+    <ul class="menu-bar">
+        <li><a href="{{url('/')}}">Promotions</a></li>
+        
+        
+        <li><a href="{{URL('briefs_index')}}    ">Briefs</a></li>
+    </ul>
+    
     <div class="container text-center border border-2 rounded" style="height: 100%">
     
     
         <header>
 
-            <div class="row mt-2 p-1 bg-primary text-white">
-                <div class="col">
-                    <h4>Briefs add, edit and delete</h4>
-                </div>
-                <div class="col d-flex justify-content-end">
-                    <a href="{{url('promotions')}}"><button class="btn btn-light">Promotions Page</button></a>
-                </div>
-            </div>
+            
 
             <div class="row mt-2 p-3">
                 <div class="col-4">

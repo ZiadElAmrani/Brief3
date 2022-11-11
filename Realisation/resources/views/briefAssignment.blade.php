@@ -11,23 +11,27 @@
     <title>Assign Brief</title>
 </head>
 <body>
+    <ul class="menu-bar">
+        <li><a href="{{url('/')}}">Promotions</a></li>
+        
+        
+        <li><a href="{{URL('briefs_index')}}    ">Briefs</a></li>
+    </ul>
     <div class="container text-center border border-2 rounded" style="height: 100%">
 
 
         <header>
 
-            <div class="row mt-2 p-1 bg-primary text-white">
+            <div class="row mt-2 p-1 bg-dark text-white">
                 <div class="col">
                     <h4>Assign Brief for Students</h4>
                 </div>
-                <div class="col d-flex justify-content-end">
-                    <a href="{{url('promotions')}}"><button class="btn btn-light">Promotions Page</button></a>
-                </div>
+                
             </div>
         </header>
     
         <a href="{{url("BriefAssign")}}/{{$brief_id}}/AttachClass/{{$data[0]->id}}">
-            <button id="btn-">
+            <button id="btn-attachallclass" class="btn btn-dark m-2">
                 <span><i></i>Attach to all class</span>
             </button></a>
         

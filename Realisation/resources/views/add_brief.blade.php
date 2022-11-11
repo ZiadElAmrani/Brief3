@@ -11,6 +11,12 @@
     <title>Add Brief</title>
 </head>
 <body>
+    <ul class="menu-bar">
+        <li><a href="{{url('/')}}">Promotions</a></li>
+        
+        
+        <li><a href="{{URL('briefs_index')}}    ">Briefs</a></li>
+    </ul>
     <div class="container text-center border border-2 rounded">
         <br><h1 >Brief Add </h1><br><br>
         <table class="table">

@@ -8,37 +8,32 @@
     <link rel="stylesheet" href="/app.css">
     <link rel="icon" href="/icon.webp">
     <script src="https://kit.fontawesome.com/8b497b2419.js" crossorigin="anonymous"></script>
-    <title>Promotions and students management</title>
+    <title>Solicode Management</title>
 </head>
 <body>
+
+    <ul class="menu-bar">
+        <li><a href="{{url('/')}}">Promotions</a></li>
+        
+        
+        <li><a href="{{URL('briefs_index')}}">Briefs</a></li>
+    </ul>
+
     <div class="container text-center border border-2 rounded" style="height: 100%;">
-        <header>
-
-            <div class="row mt-2 p-1 bg-primary text-white">
-                <div class="col">
-                    <h4>Promotions and Students Management</h4>
+        
+        <div class="row mt-2 p-3">
+            <div class="col-4">
+                <h3>Promotions:</h3>
+            </div>  
+            <div class="col-8">
+                <div class="">
+                    <a href="{{url('briefs_add')}}"><button class="btn btn-primary btn-sm">Add Brief</button></a>
+                    <button class="btn btn-secondary btn-sm" id="add_promo">Add Promotion</button>
+                    Search : <input {{-- id="search" --}} name="search" type="text" placeholder="Search..">
                 </div>
-                <div class="col d-flex justify-content-end">
-                    <button type="button" class="btn btn-light" >About</button>
-                    <button type="button" class="btn btn-light" id="submit">Settings</button>
-                </div>
+                
             </div>
-
-            <div class="row mt-2 p-3">
-                <div class="col-4">
-                    <h3>Promotions:</h3>
-                </div>  
-                <div class="col-8">
-                    <div class="">
-                        <a href="{{URL('briefs_index')}}"><button class="btn btn-primary btn-sm">Add Brief</button></a>
-                        <button class="btn btn-secondary btn-sm" id="add_promo">Add Promotion</button>
-                        Search : <input id="search_brief" name="search" type="text" placeholder="Search..">
-                    </div>
-                    
-                </div>
-            </div>
-        </header>
-
+        </div>
         <div class="container mt-4 pt-4 pb-4 bg-light text-dark d-flex justify-content-evenly">
             <div class="container_2">
                 <form id="promo_form" action="{{ route ('insert-promotion') }}" method="POST" style="display: none;">
@@ -56,9 +51,9 @@
 
 
 
-                <div class="row" id="search_table">
+                <div class="row">
                     @foreach ($data as $row)               
-                    <div class="col-4 p-2 ">
+                    <div class="col-4 p-2" id="search_table">
                         <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem; height: 8rem;" >
                             <div class="card-body" >
                                 Promotion Name: <h5 class="card-title">{{ $row->name }}</h5>
